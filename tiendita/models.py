@@ -32,7 +32,7 @@ class Category(models.Model):
 		return self.name
 
 class Comic(models.Model):
-	# company = models.ForeignKey(Company, related_name="companyC")
+	company = models.ForeignKey(Company, related_name="companyC", blank=True, null=True)
 	superhero = models.ForeignKey(SuperHero, related_name="superheroC")
 	category = models.ManyToManyField(Category, related_name="categoryC")
 	author = models.CharField(max_length=50)

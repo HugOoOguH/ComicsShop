@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Compañias</title>
+</head>
+<body>
+	{% for com in company %}
+		<a href="{%url 'tienda:comics' com.id%}">
+			<h1>{{com.name}}</h1>
+		</a>
+		<img src="/media/{{com.image}}" alt="" height="200px" width="300px">
+		<h5>Descripcion</h5>
+		<p>{{com.description}}</p>
+	{% endfor %}
+</body>
+</html>

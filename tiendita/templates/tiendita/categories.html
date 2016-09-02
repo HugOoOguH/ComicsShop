@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Comics Category</title>
+</head>
+<body>
+	{% for comic in comics %}
+		<div align="center">
+			<img src="/media/{{comic.image}}" alt="" height="200px">
+			<div align="center">
+				{{comic.title}}
+			</div>
+			<div>
+				{{comic.superhero}}
+			</div>
+			<div>
+				{{comic.author}}
+				{{comic.start_date}} 
+			</div>
+			<div text-align="justify">
+				{{comic.synopsis}}
+			</div>
+			<div>
+				Precio: 
+				${{comic.price}}
+			</div>
+			<br>
+			<br>
+			<br>
+		</div>
+	{% endfor %}
+</body>
+</html>

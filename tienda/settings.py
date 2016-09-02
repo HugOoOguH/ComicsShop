@@ -127,6 +127,8 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
+CART_SESSION_ID = 'cart' 
+
 # from django.core.urlresolvers import reverse_lazy
 
 # LOGIN_REDIRECT_URL = reverse_lazy('posts:lista')
